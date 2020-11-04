@@ -61,7 +61,7 @@ public class SuperArray {
   public String toString() {
     String result = "[";
     if(size > 0) {
-     for(int i = 0; i < size; i++) {
+     for(int i = 0; i < size-1; i++) {
        result = result + (data[i]);
        result = result + ", ";
      }
