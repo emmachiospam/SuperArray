@@ -29,8 +29,17 @@ public class SuperArray {
   }
 
   public String set(int index, String element) {
+    String orig = data[index];
     data[index] = element;
-    return "done";
+    return "replaced " + orig + " with " + element;
+  }
+
+  private void resize() {
+    int length = data.length;
+    String [] sizedUpArray = new String[length + length];
+    for(int i = 0; i < size; i++) {
+      sizedUpArray[i] = data[i];
+    }
   }
 
 }
