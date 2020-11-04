@@ -46,4 +46,29 @@ public class SuperArray {
     data = sizedUpArray;
   }
 
+  public boolean isEmpty() {
+    if (size == 0) {
+      return true;
+    }
+    return false;
+  }
+
+  public void clear() {
+    data = new String[10];
+    size = 0;
+  }
+
+  public String toString() {
+    String result = "[";
+    if(size > 0) {
+     for(int i = 0; i < size; i++) {
+       result = result + (data[i]);
+       result = result + ", ";
+     }
+     result = result + (data[size-1]);
+    }
+   result = result + "]";
+   return result;
+  }
+
 }
