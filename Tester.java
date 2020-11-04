@@ -2,12 +2,34 @@ public class Tester {
 
   public static void main(String[] args) {
     SuperArray a1 = new SuperArray();
-    // System.out.println(a1.size());
     a1.add("hullo");
     a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    a1.add("hullo");
+    // System.out.println(arrToString(a1.data()));
+    System.out.println(a1.set(2, "testing"));
     System.out.println(arrToString(a1.data()));
     a1.add("hullo");
     System.out.println(arrToString(a1.data()));
+
+    
+    SuperArray words = new SuperArray();
+    words.add("kani");
+    words.add("uni");
+    words.add("ebi");
+    for(int i = 0; i < words.size(); i++){
+      System.out.println( words.get(i) );
+    }
   }
 
   public static String arrToString(String[] arr){
