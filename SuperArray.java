@@ -10,4 +10,18 @@ public class SuperArray {
     return size;
   }
 
+  public String[] data() {
+    String [] test = new String[size];
+    for(int i = 0; i < size; i++) {
+      test[i] = data[i];
+    }
+    return test;
+  }
+
+  public boolean add(String element) {
+    data[size] = element;
+    size++;
+    return true;
+  }
+
 }
