@@ -17,10 +17,11 @@ public class Tester {
     a1.add("hullo12");
     a1.add("hullo13");
     a1.add("hullo14");
-    System.out.println(a1.set(2, "testing"));
+    a1.set(2, "testing");
+    // System.out.println(a1.toString());
+    // a1.clear();
     System.out.println(a1.toString());
-    a1.clear();
-    System.out.println(a1.toString());
+    System.out.println(a1.contains("hullo4"));
 
 
     SuperArray words = new SuperArray();
