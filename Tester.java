@@ -21,7 +21,8 @@ public class Tester {
     // System.out.println(a1.toString());
     // a1.clear();
     System.out.println(a1.toString());
-    System.out.println(a1.contains("hullo4"));
+    a1.add(2, "hullo3");
+    System.out.println(a1.toString());
 
 
     SuperArray words = new SuperArray();
