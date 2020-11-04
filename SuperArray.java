@@ -34,7 +34,7 @@ public class SuperArray {
   public String set(int index, String element) {
     String orig = data[index];
     data[index] = element;
-    return "replaced " + orig + " with " + element;
+    return orig;
   }
 
   private void resize() {
