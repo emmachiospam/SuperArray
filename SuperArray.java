@@ -86,11 +86,16 @@ public class SuperArray {
 
   public void add(int index, String element) {
     size++;
-    for(int i = size + 1; i > index; i--) {
+    for(int i = size; i > index; i--) {
       String old = data[i-1];
       data[i] = old;
     }
     data[index] = element;
   }
+
+  // public String remove(index) {
+  //   size--;
+  //   for(int i = index; i < size)
+  // }
 
 }
