@@ -93,9 +93,14 @@ public class SuperArray {
     data[index] = element;
   }
 
-  // public String remove(index) {
-  //   size--;
-  //   for(int i = index; i < size)
-  // }
+  public String remove(int index) {
+    size--;
+    String orig = data[index];
+    for(int i = index; i < size; i++) {
+      String old = data[i+1];
+      data[i] = old;
+    }
+    return orig;
+  }
 
 }
