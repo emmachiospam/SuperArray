@@ -36,7 +36,7 @@ public class SuperArray {
   }
 
   public String get(int index) {
-    if(index < 0 || index >= size) {
+    if(index < 0 || index >= size()) {
       throw new IndexOutOfBoundsException ("Index " + index +
         " is out of range");
     }
@@ -44,7 +44,7 @@ public class SuperArray {
   }
 
   public String set(int index, String element) {
-    if(index < 0 || index >= size) {
+    if(index < 0 || index >= size()) {
       throw new IndexOutOfBoundsException ("Index " + index +
         " is out of range");
     }
@@ -97,7 +97,7 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-    if(index < 0 || index >= size) {
+    if(index < 0 || index >= size()) {
       throw new IndexOutOfBoundsException ("Index " + index +
         " is out of range");
     }
@@ -110,7 +110,7 @@ public class SuperArray {
   }
 
   public String remove(int index) {
-    if(index < 0 || index >= size) {
+    if(index < 0 || index >= size()) {
       throw new IndexOutOfBoundsException ("Index " + index +
         " is out of range");
     }
