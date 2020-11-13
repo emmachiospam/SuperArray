@@ -6,6 +6,14 @@ public class SuperArray {
     data = new String[10];
   }
 
+  public SuperArray(int initialCapacity) {
+    if(initialCapacity < 0) {
+      throw new IllegalArgumentException("Initial Capicity " + initialCapacity +
+        " can not be negative");
+    }
+    data = new String[initialCapacity];
+  }
+
   public int size() {
     return size;
   }
@@ -78,10 +86,6 @@ public class SuperArray {
       }
     }
     return false;
-  }
-
-  public SuperArray(int initialCapacity) {
-    data = new String[initialCapacity];
   }
 
   public void add(int index, String element) {
