@@ -97,16 +97,19 @@ public class SuperArray {
   }
 
   public void add(int index, String element) {
-    if(index < 0 || index >= size()) {
-      throw new IndexOutOfBoundsException ("Index " + index +
-        " is out of range");
-    }
-    size++;
-    for(int i = size; i > index; i--) {
-      String old = data[i-1];
-      data[i] = old;
-    }
-    data[index] = element;
+      size++;
+      if(size >= data.length) {
+        resize();
+      }
+      for(int i = size; i > index; i--) {
+        String old = data[i-1];
+        data[i] = old;
+      }
+      data[index] = element;
+      if(index < 0 || index >= size()) {
+        throw new IndexOutOfBoundsException ("Index " + index +
+          " is out of range");
+      }
   }
 
   public String remove(int index) {
